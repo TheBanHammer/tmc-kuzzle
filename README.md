@@ -3,6 +3,8 @@
 A lightweight starter repository for running and developing on TMC Kuzzle using Docker.
 This project includes a pre-configured local server, data mappings, and helper endpoints for basic user/profile/role workflows.
 
+> This repository is provided as-is and may contain security vulnerabilities due to outdated dependencies. Contributions to update dependencies are welcome via pull requests.
+
 ## Repository layout
 
 - `docker-compose.yml`
