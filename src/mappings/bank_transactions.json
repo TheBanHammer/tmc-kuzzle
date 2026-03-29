@@ -1,0 +1,22 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "account": {
+                "type": "keyword"
+            },
+            "amount": {
+                "type": "float"
+            },
+            "description": {
+                "type": "text"
+            },
+            "direction": {
+                "type": "keyword"
+            },
+            "newBalance": {
+                "type": "float"
+            }
+        }
+    }
+}

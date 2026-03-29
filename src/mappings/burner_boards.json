@@ -1,0 +1,45 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "ownerPhoneId": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text"
+      },
+      "privacy": {
+        "type": "text"
+      },
+      "lastMessage": {
+        "type": "text"
+      },
+      "lastMessageTime": {
+        "type": "date"
+      },
+      "lastMessageAuthor": {
+        "type": "text"
+      },
+      "deleted": {
+        "properties": {
+          "epoch": {
+            "type": "date"
+          },
+          "phoneId": {
+            "type": "text"
+          },
+          "csn": {
+            "type": "text"
+          }
+        }
+      },
+      "permissions": {
+        "properties": {
+          "sendMessage": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
+}

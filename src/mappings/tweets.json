@@ -1,0 +1,65 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "author": {
+                "properties": {
+                    "handle": {
+                        "type": "keyword"
+                    },
+                    "name": {
+                        "type": "keyword"
+                    },
+                    "picture": {
+                        "type": "text"
+                    }
+                }
+            },
+            "likedBy": {
+                "type": "text"
+            },
+            "mentions": {
+                "type": "text"
+            },
+            "hashtags": {
+                "type": "text"
+            },
+            "media": {
+                "properties": {
+                    "previewUrl": {
+                        "type": "text"
+                    },
+                    "type": {
+                        "type": "keyword"
+                    },
+                    "url": {
+                        "type": "text"
+                    }
+                }
+            },
+            "replies": {
+                "type": "integer"
+            },
+            "replyingToId": {
+                "type": "keyword"
+            },
+            "replyingToRef": {
+                "type": "nested",
+                "properties": {
+                    "handle": {
+                        "type": "keyword"
+                    },
+                    "name": {
+                        "type": "text"
+                    }
+                }
+            },
+            "sent": {
+                "type": "date"
+            },
+            "tweetContent": {
+                "type": "text"
+            }
+        }
+    }
+}

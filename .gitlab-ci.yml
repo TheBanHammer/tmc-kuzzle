@@ -1,0 +1,15 @@
+stages:
+  - package
+
+package:
+  stage: package
+  artifacts:
+    name: "$CI_PROJECT_NAME.$CI_JOB_ID"
+    paths:
+      - "./$CI_PROJECT_NAME"
+    exclude:
+      - .git/**/*
+      - .git
+  script:
+    - mkdir $CI_PROJECT_NAME
+    - find ./src/mappings/ -maxdepth 1 -mindepth 1 -name '*.json' -print0 | xargs -0 mv -t ./$CI_PROJECT_NAME

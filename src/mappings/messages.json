@@ -1,0 +1,27 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "attachments": {
+                "type": "nested",
+                "properties": {
+                    "type": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "chatId": {
+                "type": "keyword"
+            },
+            "message": {
+                "type": "text"
+            },
+            "sender": {
+                "type": "keyword"
+            },
+            "sent": {
+                "type": "date"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "message": {
+                "type": "text"
+            },
+            "phoneNumber": {
+                "type": "text"
+            },
+            "read": {
+                "type": "boolean"
+            },
+            "sender": {
+                "type": "text"
+            },
+            "subject": {
+                "type": "text"
+            }
+        }
+    }
+}

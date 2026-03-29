@@ -1,0 +1,19 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "phoneId": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text"
+      },
+      "number": {
+        "type": "text"
+      },
+      "contactPhoneId": {
+        "type": "keyword"
+      }
+    }
+  }
+}

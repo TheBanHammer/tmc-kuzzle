@@ -1,0 +1,16 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "department": {
+                "type": "keyword"
+            },
+            "discord": {
+                "type": "keyword"
+            },
+                "name": {
+                "type": "keyword"
+            }
+        }
+    }
+}

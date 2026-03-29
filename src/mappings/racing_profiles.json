@@ -1,0 +1,39 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "league": {
+                "type": "keyword"
+            },
+            "results": {
+                "type": "nested",
+                "properties": {
+                    "csn": {
+                        "type": "keyword"
+                    },
+                    "fastest_lap": {
+                        "type": "long"
+                    },
+                    "position": {
+                        "type": "integer"
+                    },
+                    "total_time": {
+                        "type": "long"
+                    },
+                    "dnf": {
+                        "type": "boolean"
+                    },
+                    "car": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "started": {
+                "type": "date"
+            },
+            "track_id": {
+                "type": "keyword"
+            }
+        }
+    }
+}

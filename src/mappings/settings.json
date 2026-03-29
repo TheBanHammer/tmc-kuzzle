@@ -1,0 +1,33 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "InstalledApplications": {
+                "type": "text"
+            },
+            "Twitter": {
+                "properties": {
+                    "Accounts": {
+                        "properties": {
+                            "Bio": {
+                                "type": "text"
+                            },
+                            "Name": {
+                                "type": "text"
+                            },
+                            "ProfilePicture": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "BlockedAccounts": {
+                        "type": "text"
+                    },
+                    "CurrentAccount": {
+                        "type": "text"
+                    }
+                }
+            }
+        }
+    }
+}

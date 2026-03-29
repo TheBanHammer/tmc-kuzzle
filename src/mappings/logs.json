@@ -1,0 +1,19 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "category": {
+                "type": "keyword"
+            },
+            "colour": {
+                "type": "keyword"
+            },
+            "description": {
+                "type": "text"
+            },
+            "title": {
+                "type": "text"
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "title": {
+                "type": "text"
+            },
+            "description": {
+                "type": "text"
+            },
+            "jobType": {
+                "type": "keyword"
+            },
+            "position": {
+                "properties": {
+                    "x": {
+                        "type": "float"
+                    },
+                    "y": {
+                        "type": "float"
+                    },
+                    "z": {
+                        "type": "float"
+                    }
+                }
+            },
+            "limits": {
+                "type": "text"
+            },
+            "zones": {
+                "type": "text"
+            },
+            "urgency": {
+                "type": "integer"
+            },
+            "conversation": {
+                "type": "nested",
+                "properties": {
+                    "name": {
+                        "type": "text"
+                    },
+                    "time": {
+                        "type": "date"
+                    },
+                    "message": {
+                        "type": "text"
+                    }
+                }
+            }
+        }
+    }
+}

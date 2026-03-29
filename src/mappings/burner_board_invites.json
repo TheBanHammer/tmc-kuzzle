@@ -1,0 +1,31 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "boardId": {
+        "type": "keyword"
+      },
+      "creatorPhoneId": {
+        "type": "text"
+      },
+      "limitPhoneIds": {
+        "type": "text"
+      },
+      "expiry": {
+        "type": "date"
+      },
+      "maxUses": {
+        "type": "integer"
+      },
+      "uses": {
+        "type": "integer"
+      },
+      "hasExceededMaxUses": {
+        "type": "boolean"
+      },
+      "isRevoked": {
+        "type": "boolean"
+      }
+    }
+  }
+}

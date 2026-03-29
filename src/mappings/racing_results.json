@@ -1,0 +1,36 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "league": {
+                "type": "keyword"
+            },
+            "results": {
+                "type": "nested",
+                "properties": {
+                    "csn": {
+                        "type": "keyword"
+                    },
+                    "dnf": {
+                        "type": "boolean"
+                    },
+                    "fastest_lap": {
+                        "type": "long"
+                    },
+                    "position": {
+                        "type": "integer"
+                    },
+                    "total_time": {
+                        "type": "long"
+                    }
+                }
+            },
+            "started": {
+                "type": "date"
+            },
+            "track_id": {
+                "type": "keyword"
+            }
+        }
+    }
+}

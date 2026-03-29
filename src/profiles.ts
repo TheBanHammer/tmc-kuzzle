@@ -1,0 +1,5 @@
+export default {
+    ["server-user"]: '{"rateLimit":10000,"policies":[{"roleId":"default","restrictedTo":[{"index":"server"}]},{"roleId":"manage-users","restrictedTo":[{"index":"server"}]},{"roleId":"mass-delete","restrictedTo":[{"collections":["notifications","racing_races"],"index":"server"}]},{"roleId":"mass-create","restrictedTo":[{"collections":["positions","telemetry_positions","logs"],"index":"server"}]},{"roleId":"mass-get","restrictedTo":[{"collections":["racing_profiles","racing_users","racing_tracks", "burner_boards"],"index":"server"}]}, {"roleId":"mass-update","restrictedTo":[{"collections":["burner_phones","anklemonitor_locations"],"index":"server"}]}]}',
+    ["server-player"]: '{"rateLimit":10000,"policies":[{"roleId":"user","restrictedTo":[{"index":"server"}]},{"roleId":"mass-delete","restrictedTo":[{"collections":["notifications"],"index":"server"}]},{"roleId":"mass-get","restrictedTo":[{"collections":["racing_profiles","racing_users","racing_tracks", "burner_boards","mdt_crimes"],"index":"server"}]}]}',
+    ["server-admin"]: '{"rateLimit":10000,"policies":[{"roleId":"admin","restrictedTo":[{"index":"server"}]}]}'
+};

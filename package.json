@@ -1,0 +1,22 @@
+{
+  "name": "tmc-kuzzle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "build": "tsc",
+  "scripts": {
+    "build": "tsc",
+    "start-oldcompose": "docker-compose up --build -d && docker-compose logs --tail=0 --follow",
+    "start": "docker compose up --build -d && docker compose logs --tail=0 --follow"
+  },
+  "author": "The Modding Collective",
+  "license": "ISC",
+  "dependencies": {
+    "kuzzle": "2.34.0",
+    "kuzzle-plugin-prometheus": "^4.2.0",
+    "omgopass": "^3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}

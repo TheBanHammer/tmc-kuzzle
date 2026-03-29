@@ -1,0 +1,45 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "number": {
+        "type": "keyword"
+      },
+      "settings": {
+        "properties": {
+          "passcode": {
+            "type": "text"
+          },
+          "volume": {
+            "type": "byte"
+          },
+          "background": {
+            "type": "text"
+          },
+          "label": {
+            "type": "text"
+          }
+        }
+      },
+      "installedApps": {
+        "type": "text"
+      },
+      "appData": {
+        "properties": {}
+      },
+      "limits": {
+        "properties": {
+          "receiveOnly": {
+            "type": "boolean"
+          },
+          "expiry": {
+            "type": "date"
+          },
+          "authSendTo": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
+}

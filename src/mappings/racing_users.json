@@ -1,0 +1,45 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "bio": {
+                "type": "text"
+            },
+            "csn": {
+                "type": "keyword"
+            },
+            "league": {
+                "type": "keyword"
+            },
+            "picture": {
+                "type": "text"
+            },
+            "id": {
+                "type": "keyword"
+            },
+            "permissionLevel": {
+                "type": "integer"
+            },
+            "stats": {
+                "type": "nested",
+                "properties": {
+                    "first": {
+                        "type": "integer"
+                    },
+                    "races": {
+                        "type": "integer"
+                    },
+                    "second": {
+                        "type": "integer"
+                    },
+                    "third": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "username": {
+                "type": "text"
+            }
+        }
+    }
+}

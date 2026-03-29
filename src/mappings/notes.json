@@ -1,0 +1,18 @@
+{
+    "mappings": {
+        "properties": {
+            "title": {
+                "type": "text"
+            },
+            "phoneNumber": {
+                "type": "keyword"
+            },
+            "content": {
+                "type": "text"
+            },
+            "colour": {
+                "type": "text"
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "amount": {
+                "type": "float"
+            },
+            "automatedDue": {
+                "type": "date"
+            },
+            "recipient": {
+                "type": "keyword"
+            },
+            "sender": {
+                "type": "text"
+            },
+            "senderCitizenId": {
+                "type": "keyword"
+            },
+            "senderName": {
+                "type": "text"
+            },
+            "title": {
+                "type": "text"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "boardId": {
+        "type": "keyword"
+      },
+      "phoneId": {
+        "type": "keyword"
+      },
+      "isBanned": {
+        "type": "boolean"
+      },
+      "isJoined": {
+        "type": "boolean"
+      },
+      "permissionLevel": {
+        "type": "text"
+      }
+    }
+  }
+}

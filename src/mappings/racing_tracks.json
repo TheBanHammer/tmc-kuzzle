@@ -1,0 +1,25 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "checkpoints": {
+                "type": "object"
+            },
+            "enabled": {
+                "type": "boolean"
+            },
+            "league": {
+                "type": "keyword"
+            },
+            "markers": {
+                "type": "object"
+            },
+            "name": {
+                "type": "keyword"
+            },
+            "type": {
+                "type": "keyword"
+            }
+        }
+    }
+}

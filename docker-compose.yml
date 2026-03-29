@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  kuzzle:
+    build:
+      context: ./
+      dockerfile: kuzzle.dockerfile
+    command: node /var/app/lib/server.js
+    restart: always
+    container_name: kuzzle
+    ports:
+      - "127.0.0.1:7512:7512"
+      - "127.0.0.1:1883:1883"
+    depends_on:
+      - redis
+      - elasticsearch
+    environment:
+      - kuzzle_services__storageEngine__client__node=http://elasticsearch:9200
+      - kuzzle_services__internalCache__node__host=redis
+      - kuzzle_services__memoryStorage__node__host=redis
+      - kuzzle_server__protocols__mqtt__enabled=true
+      - NODE_ENV=production
+
+  redis:
+    image: redis:6
+    command: redis-server --appendonly yes
+    restart: always
+    volumes:
+      - redis-data:/data
+
+  elasticsearch:
+    image: kuzzleio/elasticsearch:7.4.0
+    restart: always
+    ports:
+      - "127.0.0.1:9200:9200"
+      - "127.0.0.1:9300:9300"
+    ulimits:
+      nofile: 65536
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+    environment:
+      - thread_pool.search.queue_size=500
+      - ES_JAVA_OPTS=-Xms5g -Xmx5g
+
+volumes:
+  es-data:
+    driver: local
+  redis-data:
+    driver: local

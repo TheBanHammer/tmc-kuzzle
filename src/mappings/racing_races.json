@@ -1,0 +1,60 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "raceID": {
+                "type": "integer"
+            },
+            "league": {
+                "type": "keyword"
+            },
+            "startTime": {
+                "type": "date"
+            },
+            "finishTime": {
+                "type": "date"
+            },
+            "trackID": {
+                "type": "keyword"
+            },
+            "hostID": {
+                "type": "keyword"
+            },
+            "type": {
+                "type": "keyword"
+            },
+            "laps": {
+                "type": "integer"
+            },
+            "state": {
+                "type": "integer"
+            },
+            "totalRacers": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "text"
+            },
+            "results": {
+                "type": "nested",
+                "properties": {
+                    "id": {
+                        "type": "keyword"
+                    },
+                    "fastestLap": {
+                        "type": "long"
+                    },
+                    "position": {
+                        "type": "integer"
+                    },
+                    "totalTime": {
+                        "type": "long"
+                    },
+                    "dnf": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}

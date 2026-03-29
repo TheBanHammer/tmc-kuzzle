@@ -1,0 +1,22 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "chatName": {
+                "type": "text"
+            },
+            "lastMessage": {
+                "type": "text"
+            },
+            "lastSender": {
+                "type": "text"
+            },
+            "lastUpdated": {
+                "type": "date"
+            },
+            "participants": {
+                "type": "keyword"
+            }
+        }
+    }
+}

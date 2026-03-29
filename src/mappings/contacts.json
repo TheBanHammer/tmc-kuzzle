@@ -1,0 +1,25 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "bankNumber": {
+                "type": "text"
+            },
+            "citizenid": {
+                "type": "keyword"
+            },
+            "name": {
+                "type": "text"
+            },
+            "notes": {
+                "type": "text"
+            },
+            "phoneNumber": {
+                "type": "text"
+            },
+            "picture": {
+                "type": "text"
+            }
+        }
+    }
+}

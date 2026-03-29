@@ -1,0 +1,13 @@
+{
+    "mappings": {
+        "dynamic": "false",
+        "properties": {
+            "citizenid": {
+                "type": "keyword"
+            },
+            "handle": {
+                "type": "keyword"
+            }
+        }
+    }
+}
