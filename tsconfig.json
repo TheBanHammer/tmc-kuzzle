@@ -8,7 +8,8 @@
         "declaration": true,
         "outDir": "./lib",
         "esModuleInterop": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "skipLibCheck": true
     },
     "include": ["src", "src/config.ts"],
     "exclude": ["node_modules", "**/__tests__/*"]
