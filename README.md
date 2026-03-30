@@ -5,6 +5,40 @@ This project includes a pre-configured local server, data mappings, and helper e
 
 > This repository is provided as-is and may contain security vulnerabilities due to outdated dependencies. Contributions to update dependencies are welcome via pull requests.
 
+## Setup (Local Dev)
+
+Requirements:
+- Docker (Desktop) installed and running
+- Node.js (recommended 18+)
+
+1. Clone the repository:
+   - `git clone <repo-url>`
+   - `cd tmc-kuzzle`
+
+2. Copy `.env.sample` and create a `.env` before starting the app.
+
+3. Set `TMC_ADMIN_PASSWORD` in `.env` to a strong password. The application checks this on startup and refuses to run with the default placeholder, preventing accidental insecure deployment.
+  - The `TMC_ADMIN_PASSWORD` is used only during first-time admin creation. The created admin user password is stored by Kuzzle after setup and is not rewritten on subsequent restarts.
+
+4. Start the stack:
+   - `npm start`
+   - This command should run `docker-compose up --build` (or equivalent) and create:
+     - Kuzzle server container
+     - ElasticSearch container
+     - Redis container
+
+5. Verify startup:
+   - Open browser to `http://localhost:7512` (default Kuzzle HTTP API endpoint)
+   - Check logs from `docker-compose` for any startup errors.
+
+6. (Optional) Secure with HTTPS:
+   - Use a reverse proxy such as Traefik/Nginx/caddy in front of the Kuzzle HTTP port.
+   - Configure TLS certs and set the proxy to forward to Kuzzle.
+   - Or, expose Kuzzle directly if HTTPS is not required in your local environment.
+
+Security note:
+- The startup logic in `src/server.ts` ensures Kuzzle anonymous role/profile are not left in unsafe defaults by creating scoped profiles and roles from `src/profiles`/`src/roles`.
+
 ## Repository layout
 
 - `docker-compose.yml`
@@ -53,35 +87,6 @@ This project includes a pre-configured local server, data mappings, and helper e
 
 - `src/mappings/index.ts`
   - Helper to load and apply all mapping files on Kuzzle startup.
-
-## Setup (Local Dev)
-
-Requirements:
-- Docker (Desktop) installed and running
-- Node.js (recommended 18+)
-
-1. Clone the repository:
-   - `git clone <repo-url>`
-   - `cd tmc-kuzzle`
-
-2. Install dependencies:
-   - `npm install`
-
-3. Start the stack:
-   - `npm start`
-   - This command should run `docker-compose up --build` (or equivalent) and create:
-     - Kuzzle server container
-     - ElasticSearch container
-     - Redis container
-
-4. Verify startup:
-   - Open browser to `http://localhost:7512` (default Kuzzle HTTP API endpoint)
-   - Check logs from `docker-compose` for any startup errors.
-
-5. (Optional) Secure with HTTPS:
-   - Use a reverse proxy such as Traefik/Nginx/caddy in front of the Kuzzle HTTP port.
-   - Configure TLS certs and set the proxy to forward to Kuzzle.
-   - Or, expose Kuzzle directly if HTTPS is not required in your local environment.
 
 ## Data initialization and usage
 
