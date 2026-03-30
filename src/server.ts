@@ -11,7 +11,7 @@ import TmcController from './controllers/tmc';
 
 const password = process.env.TMC_ADMIN_PASSWORD || 'ChangeThis';
 
-if (password === 'ChangeThis') {
+if (password === 'ChangeThis!') {
     console.error('Please set the TMC_ADMIN_PASSWORD environment variable to a secure password before starting the application.');
     process.exit(1);
 }

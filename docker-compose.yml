@@ -14,13 +14,14 @@ services:
     depends_on:
       - redis
       - elasticsearch
+    env_file:
+      - .env
     environment:
       - kuzzle_services__storageEngine__client__node=http://elasticsearch:9200
       - kuzzle_services__internalCache__node__host=redis
       - kuzzle_services__memoryStorage__node__host=redis
       - kuzzle_server__protocols__mqtt__enabled=true
       - NODE_ENV=production
-      - TMC_ADMIN_PASSWORD=ChangeThis!
 
   redis:
     image: redis:6
